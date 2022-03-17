@@ -11,7 +11,7 @@
     "lint:fix": "eslint src --fix",
     "typecheck": "tsc --noEmit --incremental false",
     "test:watch": "jest --watch",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "release": "standard-version",
     "push-release": "git push --follow-tags origin main",
     "postbuild": "next-sitemap && yarn rss",

@@ -88,7 +88,7 @@ export default function BlogPostPage({ post, recommendations }: BlogPostPageType
                     <Icon icon='heroicons-outline:clock' className='inline-block text-base' />
                     <span>{post.readingTime.text}</span>
                   </div>
-                  {post.tags?.length > 1 && (
+                  {post.tags?.length ? (
                     <div className='flex items-center space-x-4 truncate'>
                       <span>Tags:</span>
                       <div className='space-x-2 truncate'>
@@ -97,7 +97,7 @@ export default function BlogPostPage({ post, recommendations }: BlogPostPageType
                         ))}
                       </div>
                     </div>
-                  )}
+                  ) : null}
                 </div>
               </div>
 
