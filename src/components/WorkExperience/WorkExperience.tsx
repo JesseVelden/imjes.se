@@ -44,13 +44,13 @@ const workExperience = [
         Worked part-time besides my study at Cofano, that develops software solutions in the logistics field with
         clients in the Port of Rotterdam, and Amsterdam Schiphol Airport.
         <ul className={workExperienceListClass}>
-          <li>Introduced TypeScript and code generation for GraphQL</li>
+          <li>Helped to introduce TypeScript and code generation for GraphQL</li>
           <li>
             Created an React Native app that tracks flower shipments, which received a design award from my university
           </li>
           <li>
-            Helped to develop new features using tools like Java Spring Boot, PostgreSQL, Hibernate, and React &
-            TypeScript for the front-end
+            Developed new features using tools like Java Spring Boot, PostgreSQL, Hibernate, and React & TypeScript for
+            the front-end
           </li>
         </ul>
       </>
@@ -70,7 +70,7 @@ const workExperience = [
         I contributed to several web applications using PHP & Laravel as a part-time developer besides my study.
         <ul className={workExperienceListClass}>
           <li>Improved internal monitoring and tracking of issues of customers</li>
-          <li>Contributed to with several projects for several SMEs</li>
+          <li>Contributed to with several projects of several SMEs</li>
           <li>Designed & maintained several custom WordPress websites</li>
           <li>Helped with improving the deployment process to Apple AppStore</li>
         </ul>
