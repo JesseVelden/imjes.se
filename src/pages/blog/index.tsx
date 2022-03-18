@@ -31,18 +31,18 @@ export default function Blog({ postsGroupedByYear }: BlogPageType) {
     <Layout activePage='blog'>
       <Seo title='Blog | imjes.se' />
       <main className='container mx-auto mt-12 max-w-3xl px-4 md:px-0'>
-        <div className='mb-2 flex w-full flex-row items-center justify-between gap-3 align-baseline leading-7'>
-          <h3 className='inline-block align-baseline font-sans text-3xl font-bold'>Blog</h3>
-          <a
-            title='Link to RSS feed'
-            aria-label='Link to RSS feed'
-            className='inline-flex cursor-pointer items-center justify-center gap-2 truncate rounded-md bg-orange-400 py-1 px-3 align-baseline text-xs font-semibold tracking-wide text-stone-800 transition-all hover:scale-[1.02] focus:bg-orange-500'
-            href='/rss.xml'
-          >
-            <Icon icon='bx:rss' className='h-5 w-5' />
-            <span className='m-0 box-border whitespace-nowrap border-0 p-0 align-baseline leading-7'>RSS Feed</span>
-          </a>
-        </div>
+        <FadeIn>
+          <div className='mb-2 flex w-full flex-row items-center justify-between gap-3 align-baseline leading-7'>
+            <h3 className='inline-block align-baseline font-sans text-3xl font-bold'>Blog</h3>
+            <a
+              title='Link to RSS feed'
+              className='inline-flex cursor-pointer items-center justify-center gap-2 truncate rounded-md bg-orange-400 p-1 align-baseline text-xs font-semibold tracking-wide text-stone-800 transition-all hover:scale-[1.02] focus:bg-orange-500'
+              href='/rss.xml'
+            >
+              <Icon icon='bx:rss' className='h-5 w-5' />
+            </a>
+          </div>
+        </FadeIn>
         <div className='my-4'>
           {postsGroupedByYear &&
             Object.entries(postsGroupedByYear).map(([year, posts]) => (

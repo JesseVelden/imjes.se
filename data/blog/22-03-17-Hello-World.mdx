@@ -1,20 +1,143 @@
 ---
 title: Hello World!
 date: 2022-03-13
-excerpt: Welcome to my blog!
-cover: https://images.unsplash.com/photo-1647419745877-baac0416a8af
-coverCredits: Photo by [Clément Duguerre](https://unsplash.com/@clementduguerre) on [Unsplash](https://unsplash.com)
+excerpt: 👋 Hello world, welcome to my blog ! Finally, I found some time to work on my own website and start writing 📝.
+cover: /images/blog/hello-world/cover.jpg
+coverCredits: Photo by myself.
 tags:
+  - My Blog Series
   - Next.js
   - React
-  - Kaas
-  - Lekker
 ---
 
 ## Hello World!
 
-Welcome to my blog!
+👋 Hello world, welcome to my blog ! Finally, I found some time to work on my own website and start writing 📝.
+
+I already had this domain imjes.se for quite some time, which I mostly use as a catch-all email address,
+and it's a lot shorter to type than my full name domain: jessevandervelden.nl. So now I finally put it to full use!
+
+My primary use-case for this site is to have a short showcase of my projects and previous works. Besides, I can now use this blog as
+a tool to share my thoughts and ideas on my blog and improve my writing.
+
+I think that great writing (whether it be a blog post or documentation) is becoming more important
+for any successful open-source or commercial project. It is a great skill to explain things in a clear and honest way,
+and people will notice and appreciate that.
+
+So for a starter, let's get a quick dive in the tech that I've used 👇
+
 
 ## The making of this blog
+### The inspiration
+I have spent some time getting inspired by several blogs made with Next.js and discovered the
+[Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)
+and [ts-nextjs-tailwind-starter](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter) templates which seemed
+to be an excellent starting point.
+Both starters use markdown files which can relatively easily be converted into HTML using [mdx-bundler](https://github.com/kentcdodds/mdx-bundler) .
 
-Coming soon...
+On the [Tailwind Nextjs Starter documentation page](https://github.com/timlrx/tailwind-nextjs-starter-blog#examples)
+there are some other cool personal blogs listed where I took inspiration from.
+
+Later I found [Contentlayer](https://github.com/contentlayerdev/contentlayer) as an alternative to mdx-bundler which I
+will explain in [more detail below](#the-blog). The documentation listed also some [nice other personal blogs](https://github.com/contentlayerdev/contentlayer#who-is-using-contentlayer)
+which I took also some inspiration from.
+
+I created a moodboard by screenshotting parts that of other websites that I liked, and put it on a blank Figma canvas.
+This is something that I do quite often if I need to think about designing webpages or parts of them. Then I compile the
+best ideas together and add a touch of myself into it.
+
+
+
+
+### The site
+The main framework that I use is [Next.js](https://nextjs.org/). It's a simple web server completely based on React components
+which I already had extensive experience in at my previous jobs.
+Next, the routing is easy, and it is possible to build a completely static website while having still the benefits of
+interactivity and large ecosystem of React and the Next.js community.
+
+
+### The styling
+
+For the styling of my website I used [TailwindCSS](https://tailwindcss.com/). I think it is a great tool to use
+for styling simple websites like this one. The syntax is simple and allows me to quickly iterate on the design with
+sensible defaults. Even dark mode support is easy to set up, so you can switch themes easily by clicking the top-right
+button in my menu bar.
+
+In my first months of working with it, I constantly had the docs open in another tab. Now it almost feels seamless,
+and the docs actually learned me a lot and made me more aware of all the features of CSS itself.
+
+#### Some TailwindCSS considerations
+I've also had the experience of TailwindCSS in a bigger commercial project. Then I noticed, if you're not carefully
+extracting new components all the time and agreeing to extract some fundamental styles back in a CSS file, you can end
+up quickly with a mess of component styles. Besides, overloading classes a component styled
+with tailwind isn't a trivial task, and you need something like [tailwind-merge](https://www.npmjs.com/package/tailwind-merge) to do that.
+
+> As with every technology choice, it comes with advantages and trade-offs. For my own simple projects those trade-offs are
+worth it, but in bigger teams and bigger codebases this can be different.
+
+### The blog
+It's nice to store blog posts on the file system without any kind of lock-in or connecting to databases.
+I've decided to use [Contentlayer](https://github.com/contentlayerdev/contentlayer), which
+can be seen as a more integrated alternative to [mdx-bundler](https://github.com/kentcdodds/mdx-bundler) for
+converting markdown to HTML in Next.js.
+Contentlayer takes the post's content and metadata and generates TypeScript types and JSON files for easy importing in React.
+Besides, it can automatically hot reload markdown changes for a quick preview on my development website during writing.
+
+Additionally, Contentlayer can be used to automatically generate other computed fields based on my post. Some examples
+of things that I generate include:
+* Estimated [reading time](https://www.npmjs.com/package/reading-time)
+* Blurred image previews using the method described by [Lazar Nikolov's blog post](https://nikolovlazar.com/blog/generating-blur-for-dynamic-images-nextjs)
+* Extracting a Table of contents of a markdown file using [markdown-toc](https://github.com/jonschlinkert/markdown-toc)
+and using my own component
+
+
+### The animations
+#### imjes.se animation
+On my homepage you can see my simple animation of the letters of my domain name _imjes.se_, being morphed to:
+_I'm Jesse_. It's based on a SVG paths with two different paths for the _I_ and the _J_ which are being morphed
+from lowercase to uppercase characters. I generated the SVG paths by creating text in Figma and exporting it to
+an SVG path.
+
+As I recognize that making SVG paths in Figma is a manual approach, using JavaScript for this to generate SVG paths
+(which you could do by using [svg-text-to-path](https://www.npmjs.com/package/svg-text-to-path))
+I would only consider if I would have lots of these kinds of animations.
+
+Next it was time to animate those letters! For this I used [Framer Motion](https://www.framer.com/motion/) which
+has an easy API to animate and time animations from JS. It also played nicely with [flubber](https://github.com/veltman/flubber)
+which I used for smooth interpolation of the lowercase and uppercase SVG paths.
+
+A blog post with a more technical explanation and code-examples is coming!
+
+#### Fade-ins
+For the fade-ins on all my pages, I created a simple higher order component which would translate its content
+in a nice and smooth way.
+
+> Making this animations and using the Framer API reminded me a lot about the good old days
+where I made my first PowerPoint presentations in primary school where I would tinker around and excessively animate and
+orchestrate all different kinds of animations. It were fun times!
+
+### Some other cool stuff
+#### Automatic Open Graph images
+A blog in 2022 wouldn't be complete without cool open graph images which you can see if you share a page of my
+website on Twitter or Facebook for example. Making them manually can be cool but also time-consuming, so I've set
+up a simple generator, which I will explain in a blog post another time.
+
+#### Image lightbox
+To complete the blog, I added a lightbox wrapper for all my images, so you can admire all the pictures in full detail
+when you click on it.
+For this I used [simple-react-lightbox](https://github.com/michelecocuccio/simple-react-lightbox), which was indeed
+simple to set up!
+
+## What's next?
+Having a personal website resulted that I have learned new techniques and tools. It will be a place where I can
+share my thoughts and improve my writing and this is for me what it's all about.
+
+I am planning to post some technical articles, (for example some more details and
+code examples about the techniques that I used for this website), but I am also going to write some articles about other
+things that I find interesting and enjoy.
+
+In the end I hope if these posts will help myself by writing about techniques & trade-offs, it will probably help also
+someone else who is looking into the same things.
+
+<br/>
+Thanks for reading, and hope to see you around here soon!

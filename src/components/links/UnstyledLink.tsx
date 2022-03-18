@@ -17,7 +17,8 @@ const UnstyledLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
     const isExternal = !href.startsWith('/');
     const isNewTab = openNewTab !== undefined ? openNewTab : href && isExternal && !isSlug;
 
-    if (!isNewTab && !isSlug) {
+    const isInternalLink = !isNewTab && !isSlug;
+    if (isInternalLink) {
       return (
         <Link href={href} {...nextLinkProps}>
           <a ref={ref} {...rest} className={className}>
@@ -27,6 +28,7 @@ const UnstyledLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
       );
     }
 
+    // External Link
     return (
       <a
         ref={ref}

@@ -16,9 +16,9 @@ export default function ShareTweetButton({ url, title, className, ...rest }: Sha
   )}%0A%0A`;
 
   return (
-    <ButtonLink {...rest} href={intentUrl} className={clsx('items-center gap-2', className)} variant='outline'>
+    <ButtonLink {...rest} href={intentUrl} className={clsx('items-center gap-2', className)} variantType='outline'>
       <Icon icon='simple-icons:twitter' className='text-[1.1em] text-[#1da1f2]' />
-      <span className='text-sm !text-white'>Tweet this article</span>
+      <span className='text-sm'>Tweet this article</span>
     </ButtonLink>
   );
 }

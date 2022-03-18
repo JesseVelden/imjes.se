@@ -218,7 +218,7 @@
 }
 
 .border-subtle {
-  @apply border-gray-200 dark:border-gray-700 dark:opacity-70;
+  @apply border-gray-200 dark:border-gray-700/70;
 }
 
 .text-subtle {
@@ -250,6 +250,7 @@ article ul {
 
 article ol > li:before,
 article ul > li:before {
+  color: #bdbab9;
   content: counter(list-item, decimal) '.';
   left: 0.5rem;
   position: absolute;
@@ -257,7 +258,9 @@ article ul > li:before {
 
 article ol li ol > li:before,
 article ul > li:before {
-  content: counter(list-item, disc);
+  content: '·';
+  margin-top: -2rem;
+  font-size: 3em;
 }
 
 html,
