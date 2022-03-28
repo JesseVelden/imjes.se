@@ -7,6 +7,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 import { ParsedUrlQuery } from 'querystring';
 
 import ShareTweetButton from '@/components/buttons/ShareTweetButton';
+import { Comments } from '@/components/Comments';
 import { FadeIn } from '@/components/FadeIn';
 import { ImageLightbox } from '@/components/ImageLightbox';
 import { DesktopTableOfContents } from '@/components/layout/DesktopTableOfContents';
@@ -166,6 +167,10 @@ export default function BlogPostPage({ post, recommendations }: BlogPostPageType
             <div className='mt-8 flex flex-col items-start gap-4 sm:flex-row-reverse sm:justify-between'>
               <UnderlineLink href={GITHUB_EDIT_LINK(post.slug)}>Edit this post on GitHub</UnderlineLink>
               <UnderlineLink href='/blog'>← All blog posts</UnderlineLink>
+            </div>
+
+            <div className='pt-4'>
+              <Comments />
             </div>
           </div>
         </section>
