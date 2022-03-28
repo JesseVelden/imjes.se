@@ -1,8 +1,8 @@
-import { Giscus, Theme } from '@giscus/react';
+import { Giscus } from '@giscus/react';
 import { useTheme } from 'next-themes';
 
 export function Comments() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   return (
     <Giscus
@@ -13,7 +13,7 @@ export function Comments() {
       mapping='pathname'
       reactionsEnabled='1'
       emitMetadata='0'
-      theme={theme as Theme}
+      theme={resolvedTheme}
     />
   );
 }
