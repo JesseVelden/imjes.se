@@ -37,8 +37,8 @@ export default function HomePage({ lastThreeBlogPosts }: HomePageProps) {
                     <p className=''>I'm Jesse van der Velden, a {myAge} year old developer from The Netherlands 🇳🇱.</p>
                     <p className=''>
                       As a Full Stack Developer, my passion is to not only create excellent technical solutions, but
-                      also to thoroughly understand the problem in detail and create solutions that best serve the
-                      end-users. In the end we create software for people, not for computers.
+                      also to thoroughly understand the problem and create solutions that best serve the end-users.
+                      Because in the end we create software for people, not for computers.
                     </p>
                     <p>
                       When I'm not coding I'm probably out with friends, doing CrossFit or out for a walk while
@@ -256,7 +256,7 @@ export default function HomePage({ lastThreeBlogPosts }: HomePageProps) {
                     github='https://github.com/JesseVelden/abn-telegram'
                   />
                   <ProjectCard
-                    title='Hackintosh projects 🙏'
+                    title='Hackintosh projects 🙌'
                     description={
                       <>
                         As a poor High-School student I wanted to tinker around iOS, but couldn't afford a Macbook.
@@ -265,6 +265,7 @@ export default function HomePage({ lastThreeBlogPosts }: HomePageProps) {
                       </>
                     }
                     href='https://github.com/JesseVelden/Lenovo-Y580-OSX-Installer-Clover'
+                    github='https://github.com/JesseVelden/Lenovo-Y580-OSX-Installer-Clover'
                   />
                 </div>
               </div>
