@@ -3,8 +3,8 @@ import * as React from 'react';
 
 import UnderlineLink from '@/components/links/UnderlineLink';
 
-import CofanoImage from '/public/images/Cofano.png';
-import SSTImage from '/public/images/SST.png';
+import CofanoImage from '/public/images/cofano.png';
+import SSTImage from '/public/images/sst.png';
 import YDImage from '/public/images/YD.png';
 const workExperienceListClass = 'mx-4 mt-2 list-outside list-disc space-y-1 marker:text-primary-500';
 const employerClass = 'text-gray-700 dark:text-white';

@@ -5,7 +5,6 @@ import { compareDesc } from 'date-fns';
 import { DateTime } from 'luxon';
 import { GetStaticProps } from 'next';
 import Image from 'next/image';
-import meImage from 'public/images/me.jpg';
 import * as React from 'react';
 
 import { FadeIn } from '@/components/FadeIn';
@@ -19,6 +18,8 @@ import { ProjectCard } from '@/components/ProjectCard';
 import { RecommendationBlogCard } from '@/components/RecommendationBlogCard';
 import Seo from '@/components/Seo';
 import { WorkExperience } from '@/components/WorkExperience/WorkExperience';
+
+import meImage from '/public/images/me.jpg';
 const myAge = Math.floor(DateTime.fromFormat('10-08-1997', 'dd-MM-yyyy').diffNow('years').years * -1);
 
 export default function HomePage({ lastThreeBlogPosts }: HomePageProps) {
