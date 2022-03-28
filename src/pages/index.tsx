@@ -142,7 +142,7 @@ export default function HomePage({ lastThreeBlogPosts }: HomePageProps) {
                 </div>
                 <div className='max-w-prose space-y-4 pt-4'>
                   <p className=''>
-                    As I began working besides my study (bsc. technical computer science at the{' '}
+                    As I began working besides my study (BSc. technical computer science at the{' '}
                     <UnderlineLink href='https://utwente.nl/en'>University of Twente</UnderlineLink>
                     ), over the years I have learned a lot about ins and outs of Web Applications from programming and
                     architecture to design & infrastructure.
@@ -269,6 +269,13 @@ export default function HomePage({ lastThreeBlogPosts }: HomePageProps) {
                     github='https://github.com/JesseVelden/Lenovo-Y580-OSX-Installer-Clover'
                   />
                 </div>
+                <p className='mt-8'>
+                  Even this website is{' '}
+                  <UnderlineLink href='https://github.com/JesseVelden/imjes.se' className='ml-1'>
+                    open-source
+                  </UnderlineLink>
+                  !
+                </p>
               </div>
             </div>
           </div>

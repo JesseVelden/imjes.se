@@ -294,3 +294,21 @@ body {
 .fix-next-image > span {
   position: initial !important;
 }
+
+.top-nav {
+  @apply bg-white/95;
+}
+
+.dark .top-nav {
+  @apply bg-dark-lighter/95;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .top-nav {
+    @apply bg-white/70 backdrop-blur-md;
+  }
+
+  .dark .top-nav {
+    @apply bg-dark-lighter/70;
+  }
+}
