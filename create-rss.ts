@@ -1,18 +1,22 @@
+/* eslint @typescript-eslint/no-var-requires: 0 */
+// If Vercel updates NodeJS, then we can use ESM modules
 import { readdirSync, writeFileSync } from 'fs';
 import RSS from 'rss';
+
 const directory = './.contentlayer/generated/Post';
 const files = readdirSync(directory);
 const allPosts = [];
 
 // Now dynamically import all the posts from the files in the generated folder
 for (const file of files) {
-  const { default: jsonObject } = await import(directory + '/' + file, { assert: { type: 'json' } });
+  const jsonObject = require(directory + '/' + file);
+  // const { default: jsonObject } = await import(directory + '/' + file, { assert: { type: 'json' } });
   allPosts.push(jsonObject);
 }
 
 const feed = new RSS({
   title: 'imjes.se Blog',
-  author: 'Jesse van der Velden',
+  webMaster: 'Jesse van der Velden',
   feed_url: 'https://imjes.se/rss.xml',
   site_url: 'https://imjes.se',
   language: 'en',
