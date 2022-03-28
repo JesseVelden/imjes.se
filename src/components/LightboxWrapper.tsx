@@ -9,6 +9,9 @@ const options = {
     slideTransitionSpeed: 0.2,
   },
   caption: { captionColor: '#c5c5c5' },
+  thumbnails: {
+    showThumbnails: false,
+  },
 } as SRLWrapperOptions;
 export function LightboxWrapper({ children }: { children: ReactFragment }) {
   return <SRLWrapper options={options}>{children}</SRLWrapper>;

@@ -16,10 +16,7 @@ export function Footer() {
             <Icon icon='line-md:email' className='h-6 w-6' />
           </UnstyledLink>
         </EmailLinkWrapper>
-        <UnstyledLink
-          className='flex cursor-pointer items-center gap-1'
-          href='https://www.linkedin.com/in/jesse-van-der-velden-78b5a1108/'
-        >
+        <UnstyledLink className='flex cursor-pointer items-center gap-1' href='https://www.linkedin.com/in/jessevelden'>
           <Icon icon='la:linkedin' className='h-6 w-6' />
         </UnstyledLink>
         <UnstyledLink className='flex cursor-pointer items-center gap-1' href='https://github.com/JesseVelden'>

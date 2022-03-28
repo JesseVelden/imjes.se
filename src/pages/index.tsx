@@ -5,7 +5,6 @@ import { compareDesc } from 'date-fns';
 import { DateTime } from 'luxon';
 import { GetStaticProps } from 'next';
 import Image from 'next/image';
-import meImage from 'public/images/me.jpg';
 import * as React from 'react';
 
 import { FadeIn } from '@/components/FadeIn';
@@ -19,6 +18,8 @@ import { ProjectCard } from '@/components/ProjectCard';
 import { RecommendationBlogCard } from '@/components/RecommendationBlogCard';
 import Seo from '@/components/Seo';
 import { WorkExperience } from '@/components/WorkExperience/WorkExperience';
+
+import meImage from '/public/images/me.jpg';
 const myAge = Math.floor(DateTime.fromFormat('10-08-1997', 'dd-MM-yyyy').diffNow('years').years * -1);
 
 export default function HomePage({ lastThreeBlogPosts }: HomePageProps) {
@@ -36,9 +37,9 @@ export default function HomePage({ lastThreeBlogPosts }: HomePageProps) {
                   <div className='mt-8 max-w-prose space-y-4'>
                     <p className=''>I'm Jesse van der Velden, a {myAge} year old developer from The Netherlands 🇳🇱.</p>
                     <p className=''>
-                      My passion as a Full Stack Developer, is to not only create excellent technical solutions, but
-                      also to thoroughly understand the problem in detail and create solutions that best serve the
-                      end-users. In the end we create software for people, not for computers.
+                      As a Full Stack Developer, my passion is to not only create excellent technical solutions, but
+                      also to thoroughly understand the problem and create solutions that best serve the end-users.
+                      Because in the end we create software for people, not for computers.
                     </p>
                     <p>
                       When I'm not coding I'm probably out with friends, doing CrossFit or out for a walk while
@@ -77,10 +78,7 @@ export default function HomePage({ lastThreeBlogPosts }: HomePageProps) {
                     </EmailLinkWrapper>
                   </li>
                   <li>
-                    <UnderlineLink
-                      className='flex items-center gap-1'
-                      href='https://www.linkedin.com/in/jesse-van-der-velden-78b5a1108/'
-                    >
+                    <UnderlineLink className='flex items-center gap-1' href='https://www.linkedin.com/in/jessevelden'>
                       <Icon icon='la:linkedin' className='h-5 w-5 flex-shrink-0' />
                       LinkedIn
                     </UnderlineLink>
@@ -139,19 +137,19 @@ export default function HomePage({ lastThreeBlogPosts }: HomePageProps) {
               <FadeIn>
                 <div className='flex'>
                   <h3 className='bg-gradient-aqua bg-clip-text font-semibold text-primary-600 dark:text-transparent'>
-                    <span>About - Experience</span>
+                    <span>About me - Experience</span>
                   </h3>
                 </div>
                 <div className='max-w-prose space-y-4 pt-4'>
                   <p className=''>
-                    As I began working besides my study (technical computer science at the{' '}
+                    As I began working besides my study (BSc. technical computer science at the{' '}
                     <UnderlineLink href='https://utwente.nl/en'>University of Twente</UnderlineLink>
                     ), over the years I have learned a lot about ins and outs of Web Applications from programming and
                     architecture to design & infrastructure.
                   </p>
                   <p>
                     <span className='text-sm text-secondary'>See also more details on </span>
-                    <UnderlineLink href='https://www.linkedin.com/in/jesse-van-der-velden-78b5a1108/' className='ml-1'>
+                    <UnderlineLink href='https://www.linkedin.com/in/jessevelden' className='ml-1'>
                       my LinkedIn
                     </UnderlineLink>
                   </p>
@@ -178,15 +176,14 @@ export default function HomePage({ lastThreeBlogPosts }: HomePageProps) {
                   </div>
                   <div className='max-w-prose space-y-4 pt-4'>
                     <p>
-                      I've first started with open-source during my high-school years where I developed a better web app
-                      to access online education materials. I did that together with students from other high-schools,
-                      which I didn't know at the time.
+                      I've first started with open-source during my high-school years where I developed an easy PHP API
+                      for better web app to access online education materials.
                     </p>
 
                     <p>
                       Since then, I have benefited a great deal from the open-source community, so I like to give back
                       as well when possible. I do that by developing things that I find useful, and releasing it to the
-                      rest of the world.
+                      rest of the world, where it will hopefully also help other people.
                     </p>
 
                     <p>Here I highlight some of my own (🙌) and my contributions (🙏) to other open-source projects:</p>
@@ -260,17 +257,25 @@ export default function HomePage({ lastThreeBlogPosts }: HomePageProps) {
                     github='https://github.com/JesseVelden/abn-telegram'
                   />
                   <ProjectCard
-                    title='Hackintosh projects 🙏'
+                    title='Hackintosh projects 🙌'
                     description={
                       <>
                         As a poor High-School student I wanted to tinker around iOS, but couldn't afford a Macbook.
-                        Therefore, I wrote guides and made an installer for a Hackintosh installation my old laptops.
+                        Therefore, I wrote guides and made an installer for a Hackintosh installation on my old laptop.
                         Fortunately, I have a Macbook now, so I can focus my time on other cool projects!
                       </>
                     }
-                    href='https://github.com/JesseVelden'
+                    href='https://github.com/JesseVelden/Lenovo-Y580-OSX-Installer-Clover'
+                    github='https://github.com/JesseVelden/Lenovo-Y580-OSX-Installer-Clover'
                   />
                 </div>
+                <p className='mt-8'>
+                  Even this website is{' '}
+                  <UnderlineLink href='https://github.com/JesseVelden/imjes.se' className='ml-1'>
+                    open-source
+                  </UnderlineLink>
+                  !
+                </p>
               </div>
             </div>
           </div>

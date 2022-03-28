@@ -3,8 +3,8 @@ import * as React from 'react';
 
 import UnderlineLink from '@/components/links/UnderlineLink';
 
-import CofanoImage from '/public/images/Cofano.png';
-import SSTImage from '/public/images/SST.png';
+import CofanoImage from '/public/images/cofano.png';
+import SSTImage from '/public/images/sst.png';
 import YDImage from '/public/images/YD.png';
 const workExperienceListClass = 'mx-4 mt-2 list-outside list-disc space-y-1 marker:text-primary-500';
 const employerClass = 'text-gray-700 dark:text-white';
@@ -44,13 +44,13 @@ const workExperience = [
         Worked part-time besides my study at Cofano, that develops software solutions in the logistics field with
         clients in the Port of Rotterdam, and Amsterdam Schiphol Airport.
         <ul className={workExperienceListClass}>
-          <li>Introduced TypeScript and code generation for GraphQL</li>
+          <li>Helped to introduce TypeScript and code generation for GraphQL</li>
           <li>
             Created an React Native app that tracks flower shipments, which received a design award from my university
           </li>
           <li>
-            Helped to develop new features using tools like Java Spring Boot, PostgreSQL, Hibernate, and React &
-            TypeScript for the front-end
+            Developed new features using tools like Java Spring Boot, PostgreSQL, Hibernate, and React & TypeScript for
+            the front-end
           </li>
         </ul>
       </>
@@ -70,7 +70,7 @@ const workExperience = [
         I contributed to several web applications using PHP & Laravel as a part-time developer besides my study.
         <ul className={workExperienceListClass}>
           <li>Improved internal monitoring and tracking of issues of customers</li>
-          <li>Contributed to with several projects for several SMEs</li>
+          <li>Contributed to with several projects of several SMEs</li>
           <li>Designed & maintained several custom WordPress websites</li>
           <li>Helped with improving the deployment process to Apple AppStore</li>
         </ul>

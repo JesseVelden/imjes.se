@@ -41,7 +41,7 @@ export function HeaderNav({ activePage }: { activePage: ActivePage }) {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className='sticky top-0 z-50 z-10 bg-white/70 px-4 shadow shadow-primary-100/70 backdrop-blur-md dark:bg-dark-lighter/70 dark:shadow-primary-900/50 sm:px-6 md:px-12  lg:px-8 xl:px-0'>
+    <nav className='top-nav sticky top-0 z-50 z-10 px-4 shadow shadow-primary-100/70 dark:shadow-primary-900/50 sm:px-6 md:px-12 lg:px-8 xl:px-0'>
       <div className='container mx-auto flex w-full max-w-screen-lg items-center justify-between py-1 md:flex-row lg:px-0'>
         <HeaderLink href='/' active={activePage === 'home'} noActive={true} className='-ml-2'>
           Jesse van der Velden

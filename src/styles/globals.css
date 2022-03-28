@@ -218,7 +218,7 @@
 }
 
 .border-subtle {
-  @apply border-gray-200 dark:border-gray-700 dark:opacity-70;
+  @apply border-gray-200 dark:border-gray-700/70;
 }
 
 .text-subtle {
@@ -250,6 +250,7 @@ article ul {
 
 article ol > li:before,
 article ul > li:before {
+  color: #bdbab9;
   content: counter(list-item, decimal) '.';
   left: 0.5rem;
   position: absolute;
@@ -257,7 +258,9 @@ article ul > li:before {
 
 article ol li ol > li:before,
 article ul > li:before {
-  content: counter(list-item, disc);
+  content: '·';
+  margin-top: -2rem;
+  font-size: 3em;
 }
 
 html,
@@ -290,4 +293,22 @@ body {
 }
 .fix-next-image > span {
   position: initial !important;
+}
+
+.top-nav {
+  @apply bg-white/95;
+}
+
+.dark .top-nav {
+  @apply bg-dark-lighter/95;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .top-nav {
+    @apply bg-white/70 backdrop-blur-md;
+  }
+
+  .dark .top-nav {
+    @apply bg-dark-lighter/70;
+  }
 }

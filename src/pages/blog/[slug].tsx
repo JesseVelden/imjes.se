@@ -7,6 +7,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 import { ParsedUrlQuery } from 'querystring';
 
 import ShareTweetButton from '@/components/buttons/ShareTweetButton';
+import { Comments } from '@/components/Comments';
 import { FadeIn } from '@/components/FadeIn';
 import { ImageLightbox } from '@/components/ImageLightbox';
 import { DesktopTableOfContents } from '@/components/layout/DesktopTableOfContents';
@@ -88,7 +89,7 @@ export default function BlogPostPage({ post, recommendations }: BlogPostPageType
                     <Icon icon='heroicons-outline:clock' className='inline-block text-base' />
                     <span>{post.readingTime.text}</span>
                   </div>
-                  {post.tags?.length > 1 && (
+                  {post.tags?.length ? (
                     <div className='flex items-center space-x-4 truncate'>
                       <span>Tags:</span>
                       <div className='space-x-2 truncate'>
@@ -97,7 +98,7 @@ export default function BlogPostPage({ post, recommendations }: BlogPostPageType
                         ))}
                       </div>
                     </div>
-                  )}
+                  ) : null}
                 </div>
               </div>
 
@@ -166,6 +167,10 @@ export default function BlogPostPage({ post, recommendations }: BlogPostPageType
             <div className='mt-8 flex flex-col items-start gap-4 sm:flex-row-reverse sm:justify-between'>
               <UnderlineLink href={GITHUB_EDIT_LINK(post.slug)}>Edit this post on GitHub</UnderlineLink>
               <UnderlineLink href='/blog'>← All blog posts</UnderlineLink>
+            </div>
+
+            <div className='pt-4'>
+              <Comments />
             </div>
           </div>
         </section>

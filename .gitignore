@@ -37,5 +37,10 @@ yarn-error.log*
 robots.txt
 sitemap.xml
 
+public/rss.xml
+
 # Contentlayer
-.contentlayer
+.contentlayer/*
+!.contentlayer/generated
+.contentlayer/generated/*
+!.contentlayer/generated/*.d.ts

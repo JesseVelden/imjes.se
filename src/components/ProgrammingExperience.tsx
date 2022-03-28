@@ -20,6 +20,7 @@ const experiences = [
       { name: 'Docker', icon: 'teenyicons:docker-outline' },
       { name: 'Kubernetes', icon: 'carbon:kubernetes' },
       { name: 'Next.js', icon: 'teenyicons:nextjs-outline' },
+      { name: 'Laravel', icon: 'cib:laravel' },
       { name: 'GraphQL servers', icon: 'akar-icons:graphql-fill' },
       { name: 'Express.js', icon: 'logos:express' },
       { name: 'WordPress', icon: 'cib:wordpress' },

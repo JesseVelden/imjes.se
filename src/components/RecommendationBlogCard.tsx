@@ -39,7 +39,7 @@ export function RecommendationBlogCard({
         <div className='p-2 md:px-4 md:pt-2'>
           <span className='flex w-full flex-col justify-between gap-2 text-secondary xs:flex-row xs:items-center'>
             <div className='space-x-2 line-clamp-1 md:w-3/5'>
-              {post.tags?.length > 1 ? (
+              {post.tags?.length ? (
                 post.tags!.map((tag, i) => <Tag key={i} name={tag} />)
               ) : (
                 <div className='flex items-center gap-1 text-sm'>
