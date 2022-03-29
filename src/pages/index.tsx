@@ -34,7 +34,7 @@ export default function HomePage({ lastThreeBlogPosts }: HomePageProps) {
               <div className='flex w-full flex-col gap-8 py-4 pt-4 sm:flex-row sm:justify-between  lg:gap-24 lg:px-0 lg:pt-24'>
                 <div>
                   <ImjesseMorph />
-                  <div className='mt-8 max-w-prose space-y-4'>
+                  <div className='mt-6 max-w-prose space-y-4'>
                     <p className=''>I'm Jesse van der Velden, a {myAge} year old developer from The Netherlands 🇳🇱.</p>
                     <p className=''>
                       As a Full Stack Developer, my passion is to not only create excellent technical solutions, but

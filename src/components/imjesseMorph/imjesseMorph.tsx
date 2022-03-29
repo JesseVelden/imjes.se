@@ -24,7 +24,7 @@ const iPaths = [
   'M10.1103 0.363635V44H0.88441V0.363635H10.1103Z',
 ];
 
-const clipPathStyle = { clipPath: 'url(#myClip)' };
+const clipPathStyle = { clipPath: 'url(/#imjesseClip)' };
 export function ImjesseMorph() {
   const dotApostrophe = useMorpher();
   const iI = useMorpher();
@@ -57,31 +57,30 @@ export function ImjesseMorph() {
     <>
       <div className='relative'>
         <span className='text-bold text-4xl font-bold text-secondary'>Hi, nice to meet you</span>
-        <span className='absolute h-full w-full text-6xl font-bold tracking-wider text-transparent'>I'm Jesse</span>
+        <span className='absolute block h-full w-full text-6xl font-bold tracking-wider text-transparent'>
+          I'm Jesse
+        </span>
         <div className='mt-4 ml-1 max-w-max select-none  text-6xl font-bold tracking-wider'>
-          {/*bg-gradient-to-r from-indigo-500 to-sky-500 dark:from-indigo-400*/}
-          <svg
-            className='bg-gradient-aqua-day pointer-events-none z-10 h-full w-full select-none text-transparent'
-            style={clipPathStyle}
-            width='100%'
-            height='75px'
-          >
-            <clipPath id='myClip' className='myClip pointer-events-none select-none'>
-              <Morpher animate={iI} paths={iPaths} initial={{ y: 3 }} />
-              <Morpher animate={jJ} paths={jPaths} initial={{ x: 70, y: 3 }} />
-              <text y='50'>
-                <motion.tspan dx={15} animate={m}>
-                  m
-                </motion.tspan>
-                <motion.tspan dx={20} animate={es}>
-                  es
-                </motion.tspan>
-                <motion.tspan dx={10} animate={se}>
-                  se
-                </motion.tspan>
-              </text>
-              <Morpher animate={dotApostrophe} paths={dotCommaPaths} initial={{ x: 160, y: 35 }} />
-            </clipPath>
+          <div className='bg-gradient-aqua-day relative h-[70px] w-full overflow-hidden' style={clipPathStyle} />
+          <svg height='0'>
+            <defs>
+              <clipPath id='imjesseClip' className='select-none'>
+                <Morpher animate={iI} paths={iPaths} initial={{ y: 3 }} />
+                <Morpher animate={jJ} paths={jPaths} initial={{ x: 70, y: 3 }} />
+                <text y='50'>
+                  <motion.tspan dx={15} animate={m}>
+                    m
+                  </motion.tspan>
+                  <motion.tspan dx={20} animate={es}>
+                    es
+                  </motion.tspan>
+                  <motion.tspan dx={10} animate={se}>
+                    se
+                  </motion.tspan>
+                </text>
+                <Morpher animate={dotApostrophe} paths={dotCommaPaths} initial={{ x: 160, y: 35 }} />
+              </clipPath>
+            </defs>
           </svg>
         </div>
       </div>
