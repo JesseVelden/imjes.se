@@ -17,11 +17,11 @@ const workExperience = [
     image: YDImage,
     description: (
       <>
-        I work as a freelancer with my own company where I build and manage or contributed to some B2B Web Application
-        projects. Some highlights:
+        I work on and off as a freelancer with my own company where I build and manage or contributed to some B2B Web
+        Application projects. Some highlights:
         <ul className={workExperienceListClass}>
-          <li> Investing calculator for new housing projects in The Netherlands</li>
-          <li>Employee evaluation survey tool for a SME consultancy company</li>
+          <li>Investing calculator for new housing projects in The Netherlands</li>
+          <li>Employee evaluation survey tool for an SME consultancy company</li>
           <li>
             Registration/ training class sign up web app for the student CrossFit association alongside my year as a
             volunteer board member.
@@ -41,12 +41,12 @@ const workExperience = [
     image: CofanoImage,
     description: (
       <>
-        Worked part-time besides my study at Cofano, that develops software solutions in the logistics field with
+        Worked part-time besides my study at Cofano, which develops software solutions in the logistics field with
         clients in the Port of Rotterdam, and Amsterdam Schiphol Airport.
         <ul className={workExperienceListClass}>
           <li>Helped to introduce TypeScript and code generation for GraphQL</li>
           <li>
-            Created an React Native app that tracks flower shipments, which received a design award from my university
+            Created a React Native app that tracks flower shipments, which received a design award from my university
           </li>
           <li>
             Developed new features using tools like Java Spring Boot, PostgreSQL, Hibernate, and React & TypeScript for
